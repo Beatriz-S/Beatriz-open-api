@@ -29,5 +29,3 @@ This project uses the Star Wars API (SWAPI) to display information about planets
 
 ### API Used
 [SWAPI - The Star Wars API](https://www.swapi.tech/)
-
-[My Open API Project](https://github.com/Beatriz-S/Beatriz-open-api)
