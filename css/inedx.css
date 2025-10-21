@@ -49,7 +49,7 @@ body {
 
 header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     padding: 30px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 15px;
@@ -72,6 +72,46 @@ h1 {
     font-size: 1.1em;
     color: #a0a0ff;
     font-style: italic;
+}
+
+/* Tab Navigation */
+.tab-navigation {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    justify-content: center;
+}
+
+.tab-btn {
+    padding: 15px 30px;
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #a0a0ff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: none;
+    letter-spacing: 0.5px;
+}
+
+.tab-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 215, 0, 0.5);
+    transform: translateY(-2px);
+}
+
+.tab-btn.active {
+    background: linear-gradient(45deg, #ffd700, #ffed4e);
+    color: #000;
+    border-color: #ffd700;
+    box-shadow: 0 5px 20px rgba(255, 215, 0, 0.4);
+}
+
+.tab-btn.active:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 25px rgba(255, 215, 0, 0.6);
 }
 
 .controls {
