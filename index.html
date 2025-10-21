@@ -4,21 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Star Wars Planet Explorer - SWAPI</title>
-    <link rel="stylesheet" href="css/inedx.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <div class="stars"></div>
     <div class="container">
         <header>
-            <h1>🌌 Star Wars Planet Explorer</h1>
-            <p class="subtitle">Discover planets from a galaxy far, far away...</p>
+            <h1>🌌 Star Wars Explorer</h1>
+            <p class="subtitle">Discover planets and characters from a galaxy far, far away...</p>
         </header>
 
-        <div class="controls">
+        <!-- Tab Navigation -->
+        <div class="tab-navigation">
+            <button class="tab-btn active" data-tab="planets">🪐 Planets</button>
+            <button class="tab-btn" data-tab="people">👤 Characters</button>
+        </div>
+
+        <!-- Planets Controls -->
+        <div class="controls" id="planetsControls">
             <label for="planetId">Choose a Planet:</label>
             <input type="number" id="planetId" min="1" max="60" value="1" placeholder="Enter planet ID (1-60)">
             <button id="fetchBtn">Explore Planet</button>
             <button id="randomBtn">Random Planet</button>
+        </div>
+
+        <!-- People Controls -->
+        <div class="controls hidden" id="peopleControls">
+            <label for="personId">Choose a Character:</label>
+            <input type="number" id="personId" min="1" max="83" value="1" placeholder="Enter character ID (1-83)">
+            <button id="fetchPersonBtn">Explore Character</button>
+            <button id="randomPersonBtn">Random Character</button>
         </div>
 
         <div id="loading" class="loading hidden">
@@ -28,6 +43,7 @@
 
         <div id="error" class="error hidden"></div>
 
+        <!-- Planet Card -->
         <div id="planetCard" class="planet-card hidden">
             <h2 id="planetName"></h2>
             <div class="data-grid">
@@ -62,6 +78,41 @@
                 <div class="data-item">
                     <span class="data-label">Surface Water:</span>
                     <span class="data-value" id="surfaceWater"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Character Card -->
+        <div id="characterCard" class="planet-card hidden">
+            <h2 id="characterName"></h2>
+            <div class="data-grid">
+                <div class="data-item">
+                    <span class="data-label">Height:</span>
+                    <span class="data-value" id="height"></span>
+                </div>
+                <div class="data-item">
+                    <span class="data-label">Mass:</span>
+                    <span class="data-value" id="mass"></span>
+                </div>
+                <div class="data-item">
+                    <span class="data-label">Hair Color:</span>
+                    <span class="data-value" id="hairColor"></span>
+                </div>
+                <div class="data-item">
+                    <span class="data-label">Skin Color:</span>
+                    <span class="data-value" id="skinColor"></span>
+                </div>
+                <div class="data-item">
+                    <span class="data-label">Eye Color:</span>
+                    <span class="data-value" id="eyeColor"></span>
+                </div>
+                <div class="data-item">
+                    <span class="data-label">Birth Year:</span>
+                    <span class="data-value" id="birthYear"></span>
+                </div>
+                <div class="data-item">
+                    <span class="data-label">Gender:</span>
+                    <span class="data-value" id="gender"></span>
                 </div>
             </div>
         </div>
