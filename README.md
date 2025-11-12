@@ -5,6 +5,10 @@ Learning about API
 
 This project uses the Star Wars API (SWAPI) to display information about planets and characters from the Star Wars universe.
 
+### 🎬 Demo
+
+![Star Wars Explorer Demo](demo.gif)
+
 ### Features
 - 🌌 **Dual Data Types** - Switch between exploring planets and characters
 - 📊 Displays **multiple data points** from SWAPI:
